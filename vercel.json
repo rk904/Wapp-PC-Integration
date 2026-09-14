@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "",
+  "outputDirectory": "dashboard/public",
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": { "api/index.ts": { "includeFiles": "dashboard/public/**", "maxDuration": 60 } }
 }
