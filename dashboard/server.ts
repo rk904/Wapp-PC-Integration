@@ -29,7 +29,8 @@ const TYPES: Record<string, string> = {
 const service = new ConsoleService();
 if (process.env.WA_CONSOLE_DEMO !== "0") await service.seedDemo();
 
-const server = createServer(async (req, res) => {
+/** Request handler shared by the local server and the Vercel function (api/index.ts). */
+export async function handle(req: IncomingMessage, res: ServerResponse): Promise<void> {
   try {
     const url = new URL(req.url ?? "/", `http://${req.headers.host ?? "localhost"}`);
 
@@ -62,9 +63,9 @@ const server = createServer(async (req, res) => {
     console.error(err);
     return json(res, 500, { error: err instanceof Error ? err.message : "Unexpected error" });
   }
-});
+}
 
-server.listen(PORT, () => {
+if (!process.env.VERCEL) createServer(handle).listen(PORT, () => {
   const m = service.mode;
   console.log(`WA-Intake console → http://localhost:${PORT}`);
   console.log(`  AI: ${m.ai === "claude" ? `Claude (${m.model})` : "demo fixtures only (set ANTHROPIC_API_KEY for attached exports)"}`);

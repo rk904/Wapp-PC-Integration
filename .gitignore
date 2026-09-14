@@ -8,3 +8,4 @@ service-account*.json
 .impeccable/questions/
 .impeccable/review/
 .impeccable/hook.cache.json
+.vercel/
