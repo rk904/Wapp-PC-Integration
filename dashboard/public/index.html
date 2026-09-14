@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsApp Intake · Property Care</title>
+  <link rel="icon" href="assets/property-care-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.8 8.8 0 0 1-3.9-.9L3 20.5l1.5-4.6A8.2 8.2 0 0 1 3.6 12 8.5 8.5 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></symbol>
+      <symbol id="i-review" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-rejected" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></symbol>
+      <symbol id="i-live" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14a6.5 6.5 0 0 1 3 6"/></symbol>
+      <symbol id="i-clip" viewBox="0 0 24 24"><path d="m20.5 11.5-8.2 8.2a5 5 0 0 1-7.1-7.1l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7l-8.5 8.5a1.7 1.7 0 0 1-2.4-2.4l7.8-7.8"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="m20.5 16-4.5-4.5L6 19.5"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10.5 5-3v9l-5-3"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8M4 3.5V8h4.5M4 13a8 8 0 0 0 14.3 4.9L20 16m0 4.5V16h-4.5"/></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7.5 8.5 12 4l4.5 4.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="app" id="app">
+    <nav class="rail" aria-label="Console sections">
+      <a class="rail-logo" href="https://propertycare.co.in" title="Property Care">
+        <img src="assets/property-care-logo.png" alt="Property Care" width="40" height="38" />
+      </a>
+      <span class="rail-city">BLR</span>
+      <button class="rail-btn" data-rail="all" aria-label="All messages" title="All messages"><svg><use href="#i-chat"/></svg></button>
+      <button class="rail-btn" data-rail="review" aria-label="Review queue" title="Review queue"><svg><use href="#i-review"/></svg><span class="rail-count" data-count="review"></span></button>
+      <button class="rail-btn" data-rail="live" aria-label="Live requirements" title="Live requirements"><svg><use href="#i-live"/></svg></button>
+      <button class="rail-btn" data-rail="rejected" aria-label="Rejected messages" title="Rejected messages"><svg><use href="#i-rejected"/></svg></button>
+      <button class="rail-btn" data-rail="groups" aria-label="Groups" title="Groups"><svg><use href="#i-users"/></svg></button>
+      <span class="rail-spacer"></span>
+      <button class="rail-btn" data-rail="engine" aria-label="Engine settings" title="Engine settings"><svg><use href="#i-sliders"/></svg></button>
+    </nav>
+
+    <header class="topbar">
+      <img class="topbar-logo" src="assets/property-care-logo.png" alt="Property Care" width="34" height="32" />
+      <div class="topbar-title">
+        <h1>WhatsApp intake</h1>
+        <p class="topbar-sub" id="topbar-sub">Loading…</p>
+      </div>
+      <label class="search">
+        <svg aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="search" type="search" placeholder="Search messages, localities, senders…" autocomplete="off" />
+      </label>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="refresh" aria-label="Refresh" title="Refresh"><svg><use href="#i-refresh"/></svg></button>
+        <button class="btn-primary" id="attach-toggle" aria-expanded="false" aria-controls="attach"><svg><use href="#i-clip"/></svg><span>Attach<span class="label-long"> WhatsApp export</span></span></button>
+      </div>
+    </header>
+
+    <div class="crumbs">
+      <span>Home</span><span class="sep">-</span><span>Intake</span><span class="sep">-</span><span class="current" id="crumb-day">Today</span>
+      <span class="crumbs-spacer"></span>
+      <span class="engine-line" id="engine-line"></span>
+    </div>
+
+    <section class="attach" id="attach" hidden aria-label="Attach a WhatsApp chat export">
+      <div class="attach-drop" id="attach-drop">
+        <svg aria-hidden="true"><use href="#i-upload"/></svg>
+        <div>
+          <p class="attach-title">Drop a WhatsApp chat export here</p>
+          <p class="attach-help">In the group: <b>⋮ → More → Export chat → Without media</b>. Attach the <b>.txt</b> or <b>.zip</b>. Re-attaching the same export never creates duplicates.</p>
+        </div>
+        <label class="field">
+          <span>Group name <em>optional</em></span>
+          <input id="attach-group" type="text" placeholder="Taken from the file name" />
+        </label>
+        <label class="btn-outline" for="attach-file">Choose file</label>
+        <input id="attach-file" type="file" accept=".txt,.zip,text/plain,application/zip" hidden />
+      </div>
+      <p class="attach-status" id="attach-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="ribbon" aria-label="Today's pipeline">
+      <div class="ribbon-main">
+        <ol class="funnel" id="funnel"></ol>
+        <div class="filters">
+          <div class="chip-row" id="outcome-chips" role="group" aria-label="Filter by outcome"></div>
+          <div class="chip-row reasons" id="reason-chips" role="group" aria-label="Filter by rejection reason"></div>
+        </div>
+      </div>
+      <section class="groups-panel" id="groups-panel" aria-label="Group quality"></section>
+    </section>
+
+    <main class="mirror">
+      <section class="chat" aria-label="Messages">
+        <div class="chat-list" id="chat-list" tabindex="-1"></div>
+      </section>
+      <section class="detail" id="detail" aria-label="What WA-Intake read" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="dropzone-overlay" id="drop-overlay" hidden>
+    <div><svg aria-hidden="true"><use href="#i-upload"/></svg><p>Drop the WhatsApp export to read it</p></div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

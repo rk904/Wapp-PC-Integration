@@ -1,0 +1,31 @@
+{
+  "name": "wa-intake",
+  "version": "0.1.0",
+  "description": "WhatsApp Requirement Intake Engine (WA-Intake) - Property Care",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "try-extract": "tsx scripts/try-extract.ts",
+    "dry-run": "tsx scripts/dry-run-fixtures.ts",
+    "console": "tsx dashboard/server.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.125.0",
+    "fflate": "^0.8.3",
+    "firebase-admin": "^14.4.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}

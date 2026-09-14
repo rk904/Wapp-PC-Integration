@@ -1,0 +1,689 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T07:11:51.765Z",
+  "title": "Design System: WA-Intake Console",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Property Care Green",
+        "canonical": "#05524a",
+        "oklch": "oklch(39.5% 0.068 183.4)",
+        "tonalRamp": [
+          "oklch(15% 0.068 183.4)",
+          "oklch(26% 0.068 183.4)",
+          "oklch(37% 0.068 183.4)",
+          "oklch(48% 0.068 183.4)",
+          "oklch(59% 0.068 183.4)",
+          "oklch(70% 0.068 183.4)",
+          "oklch(82% 0.068 183.4)",
+          "oklch(95% 0.060 183.4)"
+        ]
+      },
+      "green-tint": {
+        "role": "primary",
+        "displayName": "Green Tint",
+        "canonical": "#e6efee",
+        "oklch": "oklch(94.5% 0.010 189.1)",
+        "tonalRamp": [
+          "oklch(15% 0.010 189.1)",
+          "oklch(26% 0.010 189.1)",
+          "oklch(37% 0.010 189.1)",
+          "oklch(48% 0.010 189.1)",
+          "oklch(59% 0.010 189.1)",
+          "oklch(70% 0.010 189.1)",
+          "oklch(82% 0.010 189.1)",
+          "oklch(95% 0.010 189.1)"
+        ]
+      },
+      "green-wash": {
+        "role": "primary",
+        "displayName": "Green Wash",
+        "canonical": "#f2f7f6",
+        "oklch": "oklch(97.2% 0.005 183)",
+        "tonalRamp": [
+          "oklch(15% 0.005 183)",
+          "oklch(26% 0.005 183)",
+          "oklch(37% 0.005 183)",
+          "oklch(48% 0.005 183)",
+          "oklch(59% 0.005 183)",
+          "oklch(70% 0.005 183)",
+          "oklch(82% 0.005 183)",
+          "oklch(95% 0.005 183)"
+        ]
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "Action Yellow",
+        "canonical": "#ffd700",
+        "oklch": "oklch(88.7% 0.182 95.3)",
+        "tonalRamp": [
+          "oklch(15% 0.080 95.3)",
+          "oklch(26% 0.080 95.3)",
+          "oklch(37% 0.182 95.3)",
+          "oklch(48% 0.182 95.3)",
+          "oklch(59% 0.182 95.3)",
+          "oklch(70% 0.182 95.3)",
+          "oklch(82% 0.182 95.3)",
+          "oklch(95% 0.060 95.3)"
+        ]
+      },
+      "yellow-700": {
+        "role": "secondary",
+        "displayName": "Pressed Yellow",
+        "canonical": "#e6c200",
+        "oklch": "oklch(82.1% 0.169 95.5)",
+        "tonalRamp": [
+          "oklch(15% 0.080 95.5)",
+          "oklch(26% 0.080 95.5)",
+          "oklch(37% 0.169 95.5)",
+          "oklch(48% 0.169 95.5)",
+          "oklch(59% 0.169 95.5)",
+          "oklch(70% 0.169 95.5)",
+          "oklch(82% 0.169 95.5)",
+          "oklch(95% 0.060 95.5)"
+        ]
+      },
+      "on-yellow": {
+        "role": "secondary",
+        "displayName": "On-Yellow Black",
+        "canonical": "#000000",
+        "oklch": "oklch(0.0% 0.000 0)",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(26% 0.000 0)",
+          "oklch(37% 0.000 0)",
+          "oklch(48% 0.000 0)",
+          "oklch(59% 0.000 0)",
+          "oklch(70% 0.000 0)",
+          "oklch(82% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "cream": {
+        "role": "secondary",
+        "displayName": "Breadcrumb Cream",
+        "canonical": "#fffacd",
+        "oklch": "oklch(97.8% 0.058 102.2)",
+        "tonalRamp": [
+          "oklch(15% 0.058 102.2)",
+          "oklch(26% 0.058 102.2)",
+          "oklch(37% 0.058 102.2)",
+          "oklch(48% 0.058 102.2)",
+          "oklch(59% 0.058 102.2)",
+          "oklch(70% 0.058 102.2)",
+          "oklch(82% 0.058 102.2)",
+          "oklch(95% 0.058 102.2)"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Brand Red-Orange",
+        "canonical": "#ff5c41",
+        "oklch": "oklch(68.7% 0.203 31.9)",
+        "tonalRamp": [
+          "oklch(15% 0.080 31.9)",
+          "oklch(26% 0.080 31.9)",
+          "oklch(37% 0.203 31.9)",
+          "oklch(48% 0.203 31.9)",
+          "oklch(59% 0.203 31.9)",
+          "oklch(70% 0.203 31.9)",
+          "oklch(82% 0.203 31.9)",
+          "oklch(95% 0.060 31.9)"
+        ]
+      },
+      "danger-ink": {
+        "role": "tertiary",
+        "displayName": "Danger Ink",
+        "canonical": "#b53a24",
+        "oklch": "oklch(52.5% 0.163 32.5)",
+        "tonalRamp": [
+          "oklch(15% 0.080 32.5)",
+          "oklch(26% 0.080 32.5)",
+          "oklch(37% 0.163 32.5)",
+          "oklch(48% 0.163 32.5)",
+          "oklch(59% 0.163 32.5)",
+          "oklch(70% 0.163 32.5)",
+          "oklch(82% 0.163 32.5)",
+          "oklch(95% 0.060 32.5)"
+        ]
+      },
+      "danger-tint": {
+        "role": "tertiary",
+        "displayName": "Danger Tint",
+        "canonical": "#fff0ed",
+        "oklch": "oklch(96.6% 0.017 31.1)",
+        "tonalRamp": [
+          "oklch(15% 0.017 31.1)",
+          "oklch(26% 0.017 31.1)",
+          "oklch(37% 0.017 31.1)",
+          "oklch(48% 0.017 31.1)",
+          "oklch(59% 0.017 31.1)",
+          "oklch(70% 0.017 31.1)",
+          "oklch(82% 0.017 31.1)",
+          "oklch(95% 0.017 31.1)"
+        ]
+      },
+      "teal-ink": {
+        "role": "tertiary",
+        "displayName": "Teal Ink",
+        "canonical": "#0a6f82",
+        "oklch": "oklch(50.0% 0.086 215.5)",
+        "tonalRamp": [
+          "oklch(15% 0.080 215.5)",
+          "oklch(26% 0.080 215.5)",
+          "oklch(37% 0.086 215.5)",
+          "oklch(48% 0.086 215.5)",
+          "oklch(59% 0.086 215.5)",
+          "oklch(70% 0.086 215.5)",
+          "oklch(82% 0.086 215.5)",
+          "oklch(95% 0.060 215.5)"
+        ]
+      },
+      "teal-tint": {
+        "role": "tertiary",
+        "displayName": "Teal Tint",
+        "canonical": "#e5f3f6",
+        "oklch": "oklch(95.5% 0.015 212)",
+        "tonalRamp": [
+          "oklch(15% 0.015 212)",
+          "oklch(26% 0.015 212)",
+          "oklch(37% 0.015 212)",
+          "oklch(48% 0.015 212)",
+          "oklch(59% 0.015 212)",
+          "oklch(70% 0.015 212)",
+          "oklch(82% 0.015 212)",
+          "oklch(95% 0.015 212)"
+        ]
+      },
+      "amber-ink": {
+        "role": "tertiary",
+        "displayName": "Amber Ink",
+        "canonical": "#7a5f00",
+        "oklch": "oklch(49.9% 0.102 89.3)",
+        "tonalRamp": [
+          "oklch(15% 0.080 89.3)",
+          "oklch(26% 0.080 89.3)",
+          "oklch(37% 0.102 89.3)",
+          "oklch(48% 0.102 89.3)",
+          "oklch(59% 0.102 89.3)",
+          "oklch(70% 0.102 89.3)",
+          "oklch(82% 0.102 89.3)",
+          "oklch(95% 0.060 89.3)"
+        ]
+      },
+      "amber-tint": {
+        "role": "tertiary",
+        "displayName": "Amber Tint",
+        "canonical": "#fff5bf",
+        "oklch": "oklch(96.5% 0.070 98.8)",
+        "tonalRamp": [
+          "oklch(15% 0.070 98.8)",
+          "oklch(26% 0.070 98.8)",
+          "oklch(37% 0.070 98.8)",
+          "oklch(48% 0.070 98.8)",
+          "oklch(59% 0.070 98.8)",
+          "oklch(70% 0.070 98.8)",
+          "oklch(82% 0.070 98.8)",
+          "oklch(95% 0.060 98.8)"
+        ]
+      },
+      "waiting-grey": {
+        "role": "tertiary",
+        "displayName": "Waiting Grey",
+        "canonical": "#eceeef",
+        "oklch": "oklch(94.8% 0.003 0)",
+        "tonalRamp": [
+          "oklch(15% 0.003 0)",
+          "oklch(26% 0.003 0)",
+          "oklch(37% 0.003 0)",
+          "oklch(48% 0.003 0)",
+          "oklch(59% 0.003 0)",
+          "oklch(70% 0.003 0)",
+          "oklch(82% 0.003 0)",
+          "oklch(95% 0.003 0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#212529",
+        "oklch": "oklch(26.2% 0.009 248.2)",
+        "tonalRamp": [
+          "oklch(15% 0.009 248.2)",
+          "oklch(26% 0.009 248.2)",
+          "oklch(37% 0.009 248.2)",
+          "oklch(48% 0.009 248.2)",
+          "oklch(59% 0.009 248.2)",
+          "oklch(70% 0.009 248.2)",
+          "oklch(82% 0.009 248.2)",
+          "oklch(95% 0.009 248.2)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#464c52",
+        "oklch": "oklch(41.3% 0.013 248.1)",
+        "tonalRamp": [
+          "oklch(15% 0.013 248.1)",
+          "oklch(26% 0.013 248.1)",
+          "oklch(37% 0.013 248.1)",
+          "oklch(48% 0.013 248.1)",
+          "oklch(59% 0.013 248.1)",
+          "oklch(70% 0.013 248.1)",
+          "oklch(82% 0.013 248.1)",
+          "oklch(95% 0.013 248.1)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#676d73",
+        "oklch": "oklch(53.2% 0.012 248.1)",
+        "tonalRamp": [
+          "oklch(15% 0.012 248.1)",
+          "oklch(26% 0.012 248.1)",
+          "oklch(37% 0.012 248.1)",
+          "oklch(48% 0.012 248.1)",
+          "oklch(59% 0.012 248.1)",
+          "oklch(70% 0.012 248.1)",
+          "oklch(82% 0.012 248.1)",
+          "oklch(95% 0.012 248.1)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#e2e6e5",
+        "oklch": "oklch(92.2% 0.004 0)",
+        "tonalRamp": [
+          "oklch(15% 0.004 0)",
+          "oklch(26% 0.004 0)",
+          "oklch(37% 0.004 0)",
+          "oklch(48% 0.004 0)",
+          "oklch(59% 0.004 0)",
+          "oklch(70% 0.004 0)",
+          "oklch(82% 0.004 0)",
+          "oklch(95% 0.004 0)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "canonical": "#cfd5d3",
+        "oklch": "oklch(86.8% 0.007 174.3)",
+        "tonalRamp": [
+          "oklch(15% 0.007 174.3)",
+          "oklch(26% 0.007 174.3)",
+          "oklch(37% 0.007 174.3)",
+          "oklch(48% 0.007 174.3)",
+          "oklch(59% 0.007 174.3)",
+          "oklch(70% 0.007 174.3)",
+          "oklch(82% 0.007 174.3)",
+          "oklch(95% 0.007 174.3)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#f5f7f6",
+        "oklch": "oklch(97.4% 0.002 0)",
+        "tonalRamp": [
+          "oklch(15% 0.002 0)",
+          "oklch(26% 0.002 0)",
+          "oklch(37% 0.002 0)",
+          "oklch(48% 0.002 0)",
+          "oklch(59% 0.002 0)",
+          "oklch(70% 0.002 0)",
+          "oklch(82% 0.002 0)",
+          "oklch(95% 0.002 0)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(26% 0.000 0)",
+          "oklch(37% 0.000 0)",
+          "oklch(48% 0.000 0)",
+          "oklch(59% 0.000 0)",
+          "oklch(70% 0.000 0)",
+          "oklch(82% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "chat-ground": {
+        "role": "neutral",
+        "displayName": "Chat Ground",
+        "canonical": "#eef3f1",
+        "oklch": "oklch(96.0% 0.006 170.4)",
+        "tonalRamp": [
+          "oklch(15% 0.006 170.4)",
+          "oklch(26% 0.006 170.4)",
+          "oklch(37% 0.006 170.4)",
+          "oklch(48% 0.006 170.4)",
+          "oklch(59% 0.006 170.4)",
+          "oklch(70% 0.006 170.4)",
+          "oklch(82% 0.006 170.4)",
+          "oklch(95% 0.006 170.4)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "metric-lg": {
+        "displayName": "Metric Large",
+        "purpose": "Quality score number in the requirement card."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Funnel stage counts; 1.375rem at 960px, 1.25rem at 560px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Console title in the top bar, set in brand green; 1.0625rem on phones."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Detail pane sender heading and empty-state headings; requirement header bands use 600 at 0.9375rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base text, quoted messages (1.55 line height), reason sentences."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Bubble text (5-line clamp until selected), field values at 500, buttons at 600, search input."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Chip text (500), field-group labels, stage labels (400), section titles (700), group names."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Timestamps, bubble footers, day separators, tags, legends."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Provenance tags, stamps (0.71875rem), rail counter, funnel conversion rates (600)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 2px 4px rgba(16, 40, 36, 0.06), 0 8px 24px rgba(16, 40, 36, 0.06)",
+        "purpose": "The summary ribbon card; the only resting card shadow."
+      },
+      {
+        "name": "pop",
+        "value": "0 6px 16px rgba(16, 40, 36, 0.12)",
+        "purpose": "Hovered and selected message bubbles."
+      },
+      {
+        "name": "bubble-contact",
+        "value": "0 1px 1.5px rgba(16, 40, 36, 0.12)",
+        "purpose": "Resting message bubble."
+      },
+      {
+        "name": "day-separator",
+        "value": "0 1px 2px rgba(16, 40, 36, 0.08)",
+        "purpose": "Centred date pill in the chat."
+      },
+      {
+        "name": "primary-pill",
+        "value": "0 2px 4px rgba(0, 0, 0, 0.1)",
+        "purpose": "Yellow primary button at rest."
+      },
+      {
+        "name": "primary-pill-hover",
+        "value": "0 4px 10px rgba(0, 0, 0, 0.12)",
+        "purpose": "Yellow primary button on hover."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px rgba(5, 82, 74, 0.12)",
+        "purpose": "Focused search and text fields; selected bubble."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid #05524a; outline-offset: 2px; border-radius: 6px",
+      "purpose": "Global :focus-visible treatment for every interactive element."
+    },
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing curve for all transitions and keyframes."
+      },
+      {
+        "name": "duration-press",
+        "value": "120ms",
+        "purpose": "Primary pill press nudge (translateY 1px)."
+      },
+      {
+        "name": "duration-hover",
+        "value": "160ms",
+        "purpose": "Bubble, group row and source-highlight hover."
+      },
+      {
+        "name": "duration-control",
+        "value": "180ms",
+        "purpose": "Button, chip, rail and field colour and focus changes."
+      },
+      {
+        "name": "duration-sheet",
+        "value": "220ms",
+        "purpose": "Mobile detail sheet fade and scale from 0.985."
+      },
+      {
+        "name": "duration-status",
+        "value": "300ms",
+        "purpose": "Stamp and funnel count colour changes."
+      },
+      {
+        "name": "count-bump",
+        "value": "420ms; translateY(4px) + opacity 0.4 to rest",
+        "purpose": "A funnel count that changed on refresh."
+      },
+      {
+        "name": "stamp-flip",
+        "value": "520ms; scale(0.7) rotate(-6deg), 60% scale(1.12) rotate(2deg), rest",
+        "purpose": "An outcome stamp whose status just changed."
+      },
+      {
+        "name": "spin",
+        "value": "700ms linear infinite",
+        "purpose": "Refresh icon while loading."
+      },
+      {
+        "name": "shimmer",
+        "value": "1.2s linear infinite; #e6ecea / #f2f6f4 gradient",
+        "purpose": "Skeleton bubbles while the snapshot loads."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition durations 1ms",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1180px",
+        "purpose": "At or below: group panel stacks under the funnel; top bar subtitle hides; attach area wraps."
+      },
+      {
+        "name": "tablet",
+        "value": "960px",
+        "purpose": "At or below: rail hides, logo joins the top bar, single-column scroll, detail becomes a full-screen sheet."
+      },
+      {
+        "name": "phone",
+        "value": "560px",
+        "purpose": "At or below: funnel becomes a 3-column grid, reason chips scroll under a fade mask, Attach label shortens, refresh and action-bar message hide."
+      }
+    ],
+    "icons": {
+      "grid": "24px viewBox",
+      "size": "20px default; 22px in the rail; 13px in stamps",
+      "stroke": "1.8 (2.4 in stamps), round caps and joins, currentColor, no fill",
+      "delivery": "inline SVG symbols"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Pill Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one yellow action per region: Attach WhatsApp export in the top bar, Approve and publish in the action bar.",
+      "html": "<button class=\"ds-btn-primary\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m20.5 11.5-8.2 8.2a5 5 0 0 1-7.1-7.1l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7l-8.5 8.5a1.7 1.7 0 0 1-2.4-2.4l7.8-7.8\"/></svg>Attach WhatsApp export</button>",
+      "css": "svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none} .ds-btn-primary{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border:0;border-radius:25px;background:var(--yellow, #ffd700);color:#000;font:600 0.875rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;white-space:nowrap;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),transform 120ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-btn-primary:hover{background:var(--yellow-700, #e6c200);box-shadow:0 4px 10px rgba(0,0,0,0.12)} .ds-btn-primary:active{transform:translateY(1px)} .ds-btn-primary:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px} .ds-btn-primary:disabled{background:#efe7b0;color:rgba(0,0,0,0.45);box-shadow:none;cursor:not-allowed}"
+    },
+    {
+      "name": "Outline Pill Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary actions in green ink: Choose file, Clear filters, Try again.",
+      "html": "<button class=\"ds-btn-outline\">Clear filters</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;border:1px solid var(--green, #05524a);border-radius:25px;background:var(--surface, #ffffff);color:var(--green, #05524a);font:600 0.875rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;white-space:nowrap;cursor:pointer;transition:background-color 180ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-btn-outline:hover{background:var(--green-wash, #f2f7f6)} .ds-btn-outline:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px} .ds-btn-outline:disabled{opacity:0.5}"
+    },
+    {
+      "name": "Text Danger Button",
+      "kind": "button",
+      "refersTo": "button-text-danger",
+      "description": "Reject and Take down, placed to the left of the primary pill.",
+      "html": "<button class=\"ds-btn-danger\">Reject</button>",
+      "css": ".ds-btn-danger{height:40px;padding:0 14px;border:0;border-radius:25px;background:transparent;color:var(--danger-ink, #b53a24);font:600 0.875rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;cursor:pointer} .ds-btn-danger:hover{background:var(--danger-tint, #fff0ed)} .ds-btn-danger:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px} .ds-btn-danger:disabled{opacity:0.5}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Pill search in the top bar with a leading line icon and a green focus halo.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-3.5-3.5\"/></svg><input type=\"search\" placeholder=\"Search messages, localities, senders…\"></label>",
+      "css": "svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none} .ds-search{display:flex;align-items:center;gap:10px;height:44px;max-width:560px;padding:0 18px;border:1px solid var(--line-strong, #cfd5d3);border-radius:25px;background:var(--surface, #ffffff);color:var(--ink-3, #676d73);transition:border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-search:focus-within{border-color:var(--green, #05524a);box-shadow:0 0 0 3px rgba(5,82,74,0.12)} .ds-search input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:400 0.875rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;color:var(--ink, #212529)} .ds-search input::placeholder{color:var(--ink-3, #676d73)}"
+    },
+    {
+      "name": "Icon Rail",
+      "kind": "nav",
+      "refersTo": "rail-button",
+      "description": "72px left rail of 44px icon buttons; the current section fills green and the review item carries a yellow counter.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Sections\"><span class=\"ds-rail-city\">BLR</span><button class=\"ds-rail-btn\" aria-current=\"true\" aria-label=\"All messages\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M21 11.5a8.4 8.4 0 0 1-9 8.4 8.8 8.8 0 0 1-3.9-.9L3 20.5l1.5-4.6A8.2 8.2 0 0 1 3.6 12 8.5 8.5 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z\"/></svg></button><button class=\"ds-rail-btn\" aria-label=\"Review queue\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg><span class=\"ds-rail-count\">14</span></button><button class=\"ds-rail-btn\" aria-label=\"Groups\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20a6.5 6.5 0 0 1 13 0\"/><path d=\"M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14a6.5 6.5 0 0 1 3 6\"/></svg></button></nav>",
+      "css": "svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none} .ds-rail{display:flex;flex-direction:column;align-items:center;gap:6px;width:72px;padding:14px 0 16px;background:var(--surface, #ffffff);border-right:1px solid var(--line, #e2e6e5);font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif} .ds-rail-city{margin:0 0 8px;padding:2px 8px;font-size:0.6875rem;font-weight:700;letter-spacing:0.02em;color:var(--green, #05524a);background:var(--green-tint, #e6efee);border-radius:6px} .ds-rail-btn{position:relative;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:12px;background:transparent;color:var(--green, #05524a);cursor:pointer;transition:background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),color 180ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-rail-btn svg{width:22px;height:22px} .ds-rail-btn:hover{background:var(--green-wash, #f2f7f6)} .ds-rail-btn:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px} .ds-rail-btn[aria-current=\"true\"]{background:var(--green, #05524a);color:#fff;transition:none} .ds-rail-count{position:absolute;top:2px;right:0;min-width:18px;padding:0 5px;font-size:0.6875rem;font-weight:700;line-height:18px;text-align:center;color:#000;background:var(--yellow, #ffd700);border-radius:9px}"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Outlined pill with an outcome dot and tabular count; pressed fills solid green.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">All <b>43</b></button><button class=\"ds-chip\" aria-pressed=\"false\"><i class=\"ds-dot ds-dot-live\"></i>Live <b>6</b></button><button class=\"ds-chip\" aria-pressed=\"false\"><i class=\"ds-dot ds-dot-review\"></i>Needs review <b>13</b></button><button class=\"ds-chip\" aria-pressed=\"false\"><i class=\"ds-dot ds-dot-rejected\"></i>Rejected <b>22</b></button></div>",
+      "css": ".ds-chips{display:flex;gap:8px;flex-wrap:wrap} .ds-chip{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 14px;border:1px solid var(--line-strong, #cfd5d3);border-radius:25px;background:var(--surface, #ffffff);color:var(--ink, #212529);font:500 0.8125rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;white-space:nowrap;cursor:pointer;transition:background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),color 180ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-chip b{font-weight:700;font-variant-numeric:tabular-nums} .ds-chip:hover{border-color:var(--green, #05524a)} .ds-chip:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px} .ds-chip[aria-pressed=\"true\"]{background:var(--green, #05524a);border-color:var(--green, #05524a);color:#fff} .ds-dot{width:8px;height:8px;border-radius:50%} .ds-dot-live{background:var(--green, #05524a)} .ds-dot-review{background:var(--yellow-700, #e6c200)} .ds-dot-rejected{background:var(--danger, #ff5c41)} .ds-chip[aria-pressed=\"true\"] .ds-dot{box-shadow:0 0 0 2px #fff}"
+    },
+    {
+      "name": "Outcome Stamps",
+      "kind": "custom",
+      "refersTo": "stamp-live",
+      "description": "22px status pills with a stroke icon carrying the fixed outcome colour code.",
+      "html": "<div class=\"ds-stamps\"><span class=\"ds-stamp ds-stamp-live\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m8 12.5 2.8 2.8L16 10\"/></svg>Live</span><span class=\"ds-stamp ds-stamp-review\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg>Needs review</span><span class=\"ds-stamp ds-stamp-sighting\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m8 12.5 2.8 2.8L16 10\"/></svg>Seen again</span><span class=\"ds-stamp ds-stamp-rejected\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m15 9-6 6M9 9l6 6\"/></svg>Rejected</span><span class=\"ds-stamp ds-stamp-waiting\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg>Waiting for AI</span></div>",
+      "css": ".ds-stamps{display:flex;gap:8px;flex-wrap:wrap} .ds-stamp{display:inline-flex;align-items:center;gap:4px;height:22px;padding:0 9px;border-radius:11px;font:700 0.71875rem/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;letter-spacing:0.01em;white-space:nowrap;transition:background-color 300ms cubic-bezier(0.16, 1, 0.3, 1),color 300ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-stamp svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round} .ds-stamp-live{background:var(--green, #05524a);color:#fff} .ds-stamp-review{background:var(--yellow, #ffd700);color:#000} .ds-stamp-sighting{background:var(--teal-tint, #e5f3f6);color:var(--teal-ink, #0a6f82)} .ds-stamp-rejected{background:var(--danger-tint, #fff0ed);color:var(--danger-ink, #b53a24)} .ds-stamp-waiting{background:var(--waiting-grey, #eceeef);color:var(--ink-2, #464c52)}"
+    },
+    {
+      "name": "Message Bubble",
+      "kind": "card",
+      "refersTo": "bubble",
+      "description": "WhatsApp message on the chat ground with the 4px tail corner; hover lifts, selected gains a green border and halo, source words underline.",
+      "html": "<div class=\"ds-chat\"><button class=\"ds-bubble\"><span class=\"ds-bubble-head\"><b class=\"ds-sender\">Rohit Rentals</b><span class=\"ds-group\">HSR–Sarjapur Rentals</span><span class=\"ds-stamp-mini\">Live</span></span><span class=\"ds-bubble-text\">Requirement: 1BHK fully furnished near Bellandur, 22-25k, immediate.</span><span class=\"ds-bubble-foot\"><span>Score 89</span><time>10:34 am</time></span></button><button class=\"ds-bubble\" aria-current=\"true\"><span class=\"ds-bubble-head\"><b class=\"ds-sender\">Vinay Homes</b><span class=\"ds-group\">Whitefield Brokers Circle</span></span><span class=\"ds-bubble-text\">Need <mark class=\"ds-src\">2BHK</mark> rent <mark class=\"ds-src ds-hot\">Marathahalli</mark> 30k</span><span class=\"ds-bubble-foot\"><span class=\"ds-reason\">No budget</span><time>10:51 am</time></span></button></div>",
+      "css": ".ds-chat{display:grid;padding:8px 14px 18px;background:var(--chat-ground, #eef3f1);border:1px solid var(--line, #e2e6e5);border-radius:12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif} .ds-bubble{display:grid;gap:4px;width:100%;margin:8px 0;padding:9px 12px 8px;text-align:left;font:inherit;color:var(--ink, #212529);border:1.5px solid transparent;border-radius:4px 12px 12px 12px;background:var(--surface, #ffffff);box-shadow:0 1px 1.5px rgba(16,40,36,0.12);cursor:pointer;transition:border-color 160ms cubic-bezier(0.16, 1, 0.3, 1),box-shadow 160ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-bubble:hover{box-shadow:0 6px 16px rgba(16,40,36,0.12)} .ds-bubble:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px} .ds-bubble[aria-current=\"true\"]{border-color:var(--green, #05524a);box-shadow:0 0 0 3px rgba(5,82,74,0.12),0 6px 16px rgba(16,40,36,0.12)} .ds-bubble-head{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px} .ds-sender{font-size:0.8125rem;font-weight:700;color:var(--green, #05524a)} .ds-group{font-size:0.75rem;color:var(--ink-3, #676d73)} .ds-stamp-mini{margin-left:auto;display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:11px;background:var(--green, #05524a);color:#fff;font-size:0.71875rem;font-weight:700} .ds-bubble-text{font-size:0.875rem;line-height:1.45} .ds-bubble-foot{display:flex;gap:8px;font-size:0.75rem;color:var(--ink-3, #676d73)} .ds-bubble-foot time{margin-left:auto;font-variant-numeric:tabular-nums} .ds-reason{color:var(--danger-ink, #b53a24);font-weight:600} .ds-src{color:inherit;background:transparent;border-radius:3px;padding:0 1px;text-decoration:underline dotted var(--green, #05524a);text-decoration-thickness:1.5px;text-underline-offset:3px;transition:background-color 160ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-hot{background:var(--yellow, #ffd700);text-decoration-color:#000}"
+    },
+    {
+      "name": "Requirement Card",
+      "kind": "card",
+      "refersTo": "requirement-head-review",
+      "description": "Outcome header band, filled option pills and a field ledger with provenance tags, closed by the action bar.",
+      "html": "<article class=\"ds-req\"><header class=\"ds-req-head\"><h3>Captured — waiting for review</h3><span class=\"ds-req-stamp\">Needs review</span></header><div class=\"ds-req-body\"><div class=\"ds-pills\"><span class=\"ds-pill\">Residential</span><span class=\"ds-pill ds-pill-inferred\">Apartment</span><span class=\"ds-pill\">Rent</span></div><dl class=\"ds-fields\"><div tabindex=\"0\"><dt>City</dt><dd><span class=\"ds-value\">Bengaluru</span><span class=\"ds-prov ds-prov-inferred\">Inferred</span></dd></div><div tabindex=\"0\"><dt>BHK</dt><dd><span class=\"ds-value\">2 BHK</span><span class=\"ds-prov ds-prov-extracted\">From message</span></dd></div><div tabindex=\"0\"><dt>Furnish status</dt><dd><span class=\"ds-value\">Unfurnished</span><span class=\"ds-prov ds-prov-defaulted\">Default</span></dd></div></dl></div><footer class=\"ds-actionbar\"><p>Consultants cannot see this yet.</p><span class=\"ds-spacer\"></span><button class=\"ds-danger\">Reject</button><button class=\"ds-approve\">Approve and publish</button></footer></article>",
+      "css": ".ds-req{background:var(--surface, #ffffff);border:1px solid var(--line, #e2e6e5);border-radius:12px;overflow:hidden;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;color:var(--ink, #212529)} .ds-req-head{display:flex;align-items:center;gap:10px;padding:11px 20px;background:var(--cream, #fffacd);border-top:1px solid #efe4a3;border-bottom:1px solid #efe4a3} .ds-req-head h3{margin:0;font-size:0.9375rem;font-weight:600} .ds-req-stamp{margin-left:auto;display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:11px;background:var(--yellow, #ffd700);color:#000;font-size:0.71875rem;font-weight:700} .ds-req-body{display:grid;gap:14px;padding:14px 20px 4px} .ds-pills{display:flex;flex-wrap:wrap;gap:8px} .ds-pill{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:25px;background:var(--green, #05524a);color:#fff;font-size:0.875rem;font-weight:500} .ds-pill-inferred{background:var(--surface, #ffffff);color:var(--teal-ink, #0a6f82);box-shadow:inset 0 0 0 1.5px var(--teal-ink, #0a6f82)} .ds-fields{display:grid;grid-template-columns:minmax(120px,34%) minmax(0,1fr);margin:0} .ds-fields>div{display:grid;grid-template-columns:subgrid;grid-column:1/-1;border-radius:6px;cursor:help} .ds-fields>div:hover,.ds-fields>div:focus-visible{background:var(--cream, #fffacd)} .ds-fields>div:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:0} .ds-fields dt,.ds-fields dd{margin:0;padding:9px 0;border-top:1px solid var(--line, #e2e6e5)} .ds-fields>div:first-child dt,.ds-fields>div:first-child dd{border-top:0} .ds-fields dt{padding-left:6px;padding-right:12px;font-size:0.8125rem;color:var(--ink-3, #676d73)} .ds-fields dd{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;font-size:0.875rem;font-weight:500} .ds-fields>div:hover .ds-value{color:var(--green, #05524a)} .ds-prov{display:inline-flex;align-items:center;height:20px;padding:0 7px;border-radius:10px;font-size:0.6875rem;font-weight:700;letter-spacing:0.01em} .ds-prov-extracted{background:var(--green-tint, #e6efee);color:var(--green, #05524a)} .ds-prov-inferred{background:var(--teal-tint, #e5f3f6);color:var(--teal-ink, #0a6f82)} .ds-prov-defaulted{background:var(--amber-tint, #fff5bf);color:var(--amber-ink, #7a5f00)} .ds-actionbar{display:flex;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid var(--line, #e2e6e5)} .ds-actionbar p{margin:0;font-size:0.8125rem;color:var(--ink-2, #464c52)} .ds-spacer{flex:1} .ds-danger{height:40px;padding:0 14px;border:0;border-radius:25px;background:transparent;color:var(--danger-ink, #b53a24);font:600 0.875rem -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;cursor:pointer} .ds-danger:hover{background:var(--danger-tint, #fff0ed)} .ds-approve{height:44px;padding:0 20px;border:0;border-radius:25px;background:var(--yellow, #ffd700);color:#000;font:600 0.875rem -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1)} .ds-approve:hover{background:var(--yellow-700, #e6c200);box-shadow:0 4px 10px rgba(0,0,0,0.12)} .ds-danger:focus-visible,.ds-approve:focus-visible{outline:2px solid var(--green, #05524a);outline-offset:2px}"
+    },
+    {
+      "name": "Breadcrumb Bar",
+      "kind": "nav",
+      "refersTo": "breadcrumb-bar",
+      "description": "Full-width cream strip under the top bar with hyphen separators, the current step in green and quiet status tags.",
+      "html": "<div class=\"ds-crumbs\"><span>Home</span><span class=\"ds-sep\">-</span><span>Intake</span><span class=\"ds-sep\">-</span><span class=\"ds-current\">Monday, 14 September</span><span class=\"ds-spacer\"></span><span class=\"ds-tag-demo\">Demo data · synthetic</span></div>",
+      "css": ".ds-crumbs{display:flex;align-items:center;gap:6px;min-height:40px;padding:8px 24px;background:var(--cream, #fffacd);font:400 0.875rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;color:var(--ink, #212529)} .ds-sep{color:var(--ink-2, #464c52)} .ds-current{color:var(--green, #05524a);font-weight:600} .ds-spacer{flex:1} .ds-tag-demo{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:11px;background:var(--surface, #ffffff);color:var(--amber-ink, #7a5f00);border:1px solid #e8d77a;font-size:0.75rem;font-weight:600;white-space:nowrap}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Property Care Back Office",
+    "overview": "This is Property Care's own shipped app turned inward: the same white cards on a faint green-grey ground, the same deep green for anything chosen, the same yellow pill for the one thing to do next, the same pale yellow breadcrumb bar. Nothing here is a new identity. A desk worker who uses the Post Requirement form should feel the console is the back room of the same building.\n\nThe world is dense and operational, not editorial. Hierarchy is carried by weight and colour inside a single system sans, not by a display face; the largest type on screen is a count, not a headline. Surfaces are flat and bordered, with one soft resting shadow for the summary card and lifts reserved for things you can pick up (a hovered message, the primary pill). Colour is semantic before it is decorative: every outcome, every provenance, every warning has a fixed hue and a tint to sit on.\n\nThe signature texture is WhatsApp's own: a green-grey chat ground, white message bubbles with a squared top-left \"tail\" corner, rounded outcome stamps. The Property Care chrome frames it; the chat material fills it.",
+    "keyCharacteristics": [
+      "Brand-bound palette: Property Care green, action yellow, breadcrumb cream, red-orange danger.",
+      "One system sans stack, sentence case, hierarchy by weight (400/500/600/700) and tabular numerals.",
+      "Pills for every control and status; 12px cards for containers; a 4px tail corner on anything that quotes a message.",
+      "Flat, bordered panels; shadows only on the summary card, the primary pill, and hovered or selected bubbles.",
+      "Fixed outcome colour code: green Live, yellow Needs review, teal Seen again, red-orange Rejected, grey Waiting.",
+      "Line-drawn inline SVG icons (24px grid, 1.8 stroke, round caps)."
+    ],
+    "rules": [
+      {
+        "name": "The Green Means Chosen Rule",
+        "body": "A filled green shape always means selected, active or live. Unselected controls are outlined or transparent with green ink; they turn solid green only when pressed or current.",
+        "section": "colors"
+      },
+      {
+        "name": "The Yellow Is a Signal Rule",
+        "body": "Action Yellow fills small shapes only: a pill button, a stamp, a counter, a highlight. Large yellow fields use Breadcrumb Cream instead.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fixed Outcome Code Rule",
+        "body": "Live is green, Needs review is yellow, Seen again is teal, Rejected is red-orange, Waiting is grey, everywhere: stamps, chip dots, header bands. Provenance reuses the same inks: extracted green, inferred teal, defaulted amber.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "One system sans, no second face. Hierarchy comes from weight and size steps between 0.6875rem and 2rem.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Numbers Rule",
+        "body": "Every count, time, score, percentage and coordinate sets `tabular-nums` so columns of numbers stay still as they update.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels, buttons, stamps and headings are sentence case with at most 0.02em tracking. The only capitals are the literal city code (BLR).",
+        "section": "typography"
+      },
+      {
+        "name": "The Border Before Shadow Rule",
+        "body": "Panels and regions separate with 1px lines. A resting shadow is allowed on the one summary card and on bubbles; everything else lifts only in response to hover, selection or focus.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Property Care Green (`#05524a`) as the fill for anything selected, current or live, and as the ink for unselected controls.",
+      "Do give each region at most one Action Yellow (`#ffd700`) pill with black text, and pair a destructive choice with it as a Danger Ink text button to its left.",
+      "Do put every control, chip, stamp and tag in a pill (25px) and every container in a 12px rectangle; square the top-left corner to 4px on anything that shows a WhatsApp message.",
+      "Do keep outcome colours fixed: green Live, yellow Needs review, teal Seen again, red-orange Rejected, grey Waiting.",
+      "Do show provenance beside extracted values with the three tags: From message (green tint), Inferred (teal tint), Default (amber tint).",
+      "Do set counts, times, scores and percentages in tabular numerals.",
+      "Do separate panels with 1px `#e2e6e5` lines and reserve shadows for the summary card, bubbles and the primary pill.",
+      "Do use the real Property Care logo files, and label any synthetic data with the amber \"Demo data · synthetic\" tag.",
+      "Do draw icons as inline 24px-grid line SVGs at 1.8 stroke with round caps, inheriting `currentColor`.",
+      "Do honour `prefers-reduced-motion` by collapsing all motion."
+    ],
+    "donts": [
+      "Don't fill large areas with Action Yellow; use Breadcrumb Cream (`#fffacd`) for yellow bands and notes.",
+      "Don't use Brand Red-Orange (`#ff5c41`) for text; it fails contrast on white. Use Danger Ink (`#b53a24`).",
+      "Don't introduce a second typeface or a web display font; the brand binds the system sans stack.",
+      "Don't uppercase or letter-space labels, buttons or stamps.",
+      "Don't redraw, recolour or restyle the Property Care logo.",
+      "Don't use icon fonts, emoji or text glyphs as icons.",
+      "Don't add hard offset shadows or ungreened neutral-grey shadows outside the yellow pill.",
+      "Don't use the teal, amber or danger ink/tint pairs as category or decorative colours; they are reserved for outcome, provenance and caution meanings."
+    ]
+  }
+}

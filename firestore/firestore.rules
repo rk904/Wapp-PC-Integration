@@ -1,0 +1,98 @@
+rules_version = '2';
+
+// WA-Intake access control (PRD §19.3). Server code (Admin SDK) bypasses these rules;
+// they govern the Ionic app, the review console and any client SDK access.
+//
+// Expects custom claims: role in {admin, ops, consultant, growth_partner, developer},
+// and for growth partners `territories`: list of cities, e.g. ["bengaluru"].
+// Developer read access is granted only in the non-production project (deploy
+// firestore.dev.rules there); in production the developer role gets nothing extra.
+//
+// NOT YET VERIFIED against the emulator — see README "Verification status".
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function role() { return signedIn() ? request.auth.token.role : null; }
+    function isAdmin() { return role() == 'admin'; }
+    function isOps() { return role() == 'ops'; }
+    function isStaff() { return isAdmin() || isOps(); }
+
+    // ---- Raw archive: founder/admin and ops read; nobody writes from a client.
+    match /wa_raw_messages/{messageId} {
+      allow read: if isStaff();
+      allow write: if false;
+    }
+
+    // ---- Rejections: staff read; staff may only record an overturn.
+    match /wa_rejected_messages/{rejectionId} {
+      allow read: if isStaff();
+      allow update: if isStaff()
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['reviewedByHuman', 'overturnedToRequirementId', 'reviewedBy', 'reviewedAt']);
+      allow create, delete: if false;
+    }
+
+    // ---- Requirements (shared with manual Post Requirement entries).
+    match /requirements/{requirementId} {
+      function isWhatsApp() { return resource.data.source == 'whatsapp_group'; }
+
+      allow read: if isStaff()
+        || (role() == 'consultant' && resource.data.status == 'active')
+        || (role() == 'growth_partner' && resource.data.status == 'active'
+            && resource.data.city in request.auth.token.territories);
+
+      // Ops edits / approves; review actions cannot rewrite provenance.
+      allow update: if isStaff()
+        && !request.resource.data.diff(resource.data).affectedKeys()
+              .hasAny(['sourceBlock', 'fieldProvenance', 'sightings', 'fingerprint', 'normalizedTextHash']);
+      allow create: if isStaff() && request.resource.data.source != 'whatsapp_group';
+      allow delete: if isAdmin(); // erasure on request (§19.2)
+
+      // Contact is masked until the requirement is assigned to the reader (§19.2, §19.3).
+      match /private/{docId} {
+        allow read: if isStaff()
+          || (signedIn()
+              && get(/databases/$(database)/documents/requirements/$(requirementId)).data.assignedTo == request.auth.uid);
+        allow write: if isStaff();
+      }
+    }
+
+    match /wa_review_queue/{requirementId} {
+      allow read, delete: if isStaff();
+      allow create, update: if false;
+    }
+
+    // ---- Configuration: RK edits; ops read.
+    match /qualification_config/{version} {
+      allow read: if isStaff();
+      // New versions only — existing versions are immutable so past decisions stay explainable.
+      allow create: if isAdmin();
+      allow update: if isAdmin() && version == '_active';
+      allow delete: if false;
+    }
+    match /wa_groups/{groupId} {
+      allow read: if isStaff();
+      allow write: if isAdmin();
+    }
+    match /locality_aliases/{alias} {
+      allow read: if isStaff();
+      allow write: if isStaff(); // ops tune the alias table without a deploy (§11.1)
+    }
+    match /wa_blocklist/{phone} {
+      allow read, write: if isStaff();
+    }
+    match /wa_unresolved_localities/{id} {
+      allow read, delete: if isStaff();
+    }
+
+    // ---- Engine internals: server only.
+    match /wa_sender_reputation/{phone} { allow read: if isStaff(); allow write: if false; }
+    match /locality_master/{key} { allow read: if isStaff(); allow write: if false; }
+    match /wa_text_hashes/{hash} { allow read, write: if false; }
+    match /wa_extractions/{id} { allow read, write: if false; }
+    match /wa_known_consultants/{phone} { allow read: if isStaff(); allow write: if isAdmin(); }
+    match /wa_audit_log/{id} { allow read: if isAdmin(); allow write: if false; }
+  }
+}
