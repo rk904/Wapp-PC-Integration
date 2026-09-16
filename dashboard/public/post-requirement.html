@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post Requirement · Property Care</title>
+  <link rel="icon" href="assets/property-care-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="post-requirement.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.8 8.8 0 0 1-3.9-.9L3 20.5l1.5-4.6A8.2 8.2 0 0 1 3.6 12 8.5 8.5 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-live" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></symbol>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.3l1.3-4.2a8.5 8.5 0 1 1 15.7-4.5Z"/><path d="M9.2 8.6c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .4-.1.5l-.5.6c-.1.1-.1.3 0 .4a6 6 0 0 0 2.6 2.5c.2.1.3.1.4 0l.7-.7c.2-.2.4-.2.6-.1l1.4.7c.2.1.4.2.4.4 0 .5-.2 1.2-.8 1.5-.5.3-1.2.4-2.2 0a8.6 8.6 0 0 1-4.6-4.3c-.5-1-.4-1.7-.3-2.2Z"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="app pr-app" id="app">
+    <nav class="rail" aria-label="Console sections">
+      <a class="rail-logo" href="https://propertycare.co.in" title="Property Care"><img src="assets/property-care-logo.png" alt="Property Care" width="40" height="38" /></a>
+      <span class="rail-city">BLR</span>
+      <a class="rail-btn" href="./" aria-label="WhatsApp intake" title="WhatsApp intake"><svg><use href="#i-chat"/></svg></a>
+      <a class="rail-btn" href="post-requirement.html" aria-current="true" aria-label="Post requirement" title="Post requirement"><svg><use href="#i-plus"/></svg></a>
+    </nav>
+
+    <header class="topbar">
+      <img class="topbar-logo" src="assets/property-care-logo.png" alt="Property Care" width="34" height="32" />
+      <div class="topbar-title">
+        <h1>Post Requirement</h1>
+        <p class="topbar-sub">Enter a buyer's villa requirement for Bengaluru</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="btn-outline" href="./"><svg><use href="#i-back"/></svg>Intake console</a>
+      </div>
+    </header>
+
+    <div class="crumbs">
+      <span>Home</span><span class="sep">-</span><span>Intake</span><span class="sep">-</span><span class="current">Post Requirement</span>
+    </div>
+
+    <main class="pr-main">
+      <form class="pr-form" id="form" novalidate>
+        <div class="pr-summary" id="summary" aria-live="polite">
+          <span class="pill-filled">Residential</span><span class="pill-filled">Villa</span><span class="pill-filled" id="summary-service">Buy</span>
+          <span class="pr-mandatory">All <b>*</b> marked fields are mandatory</span>
+        </div>
+
+        <fieldset class="pr-section">
+          <legend>Customer</legend>
+          <div class="pr-grid">
+            <label class="field pr-field">
+              <span>Name <b>*</b></span>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Customer's name" required maxlength="80" />
+              <em class="pr-error" data-error="name"></em>
+            </label>
+            <label class="field pr-field">
+              <span>WhatsApp number <b>*</b></span>
+              <span class="pr-prefixed"><span class="pr-prefix">+91</span><input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile" required pattern="[6-9][0-9]{9}" maxlength="13" /></span>
+              <em class="pr-error" data-error="whatsapp"></em>
+            </label>
+            <label class="field pr-field">
+              <span>Email <b>*</b></span>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required />
+              <em class="pr-error" data-error="email"></em>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pr-section">
+          <legend>Requirement</legend>
+          <div class="pr-grid">
+            <div class="pr-field">
+              <span class="pr-label">Property</span>
+              <div class="pr-static"><span class="pill-filled">Residential</span><span class="pill-filled">Villa</span></div>
+            </div>
+            <div class="pr-field">
+              <span class="pr-label" id="service-label">Service required <b>*</b></span>
+              <div class="chip-row" role="radiogroup" aria-labelledby="service-label" id="service">
+                <button type="button" class="chip" role="radio" aria-checked="true" data-value="buy">Buy</button>
+                <button type="button" class="chip" role="radio" aria-checked="false" data-value="rent">Rent</button>
+                <button type="button" class="chip" role="radio" aria-checked="false" data-value="lease">Lease</button>
+              </div>
+            </div>
+            <div class="pr-field">
+              <span class="pr-label" id="budget-label">Budget <b>*</b></span>
+              <div class="chip-row" role="radiogroup" aria-labelledby="budget-label" id="budget">
+                <button type="button" class="chip" role="radio" aria-checked="false" data-value="under_2cr">&lt; 2 Cr</button>
+                <button type="button" class="chip" role="radio" aria-checked="false" data-value="2_5cr">2 – 5 Cr</button>
+                <button type="button" class="chip" role="radio" aria-checked="false" data-value="5cr_plus">5 Cr +</button>
+              </div>
+              <em class="pr-error" data-error="budgetBand"></em>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="pr-section">
+          <legend>Location <span class="pr-legend-note">Bengaluru only · up to 4</span></legend>
+          <div class="pr-loc">
+            <label class="search pr-search" id="loc-search">
+              <svg aria-hidden="true"><use href="#i-search"/></svg>
+              <input id="loc-input" type="text" placeholder="Type a locality, e.g. Singasandra" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="loc-list" aria-autocomplete="list" />
+            </label>
+            <ul class="pr-suggest" id="loc-list" role="listbox" hidden></ul>
+            <div class="pr-chosen" id="loc-chosen" aria-live="polite"></div>
+            <p class="pr-hint" id="loc-hint">Pick from the list so each location carries a map pin.</p>
+            <em class="pr-error" data-error="localities"></em>
+            <div class="pr-map" id="map" aria-label="Map of chosen locations"></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="pr-section">
+          <legend>Posting</legend>
+          <div class="pr-grid">
+            <label class="field pr-field">
+              <span>Posted date</span>
+              <input id="postedAt" name="postedAt" type="datetime-local" step="1" />
+              <em class="pr-hint">Defaults to now (IST). Change it only for back-dated entries.</em>
+            </label>
+            <label class="field pr-field">
+              <span>Posted by</span>
+              <input id="postedBy" name="postedBy" type="text" value="RK" maxlength="60" />
+            </label>
+            <label class="field pr-field pr-span2">
+              <span>Notes <em>optional</em></span>
+              <input id="notes" name="notes" type="text" maxlength="1000" placeholder="Anything the customer said that the fields cannot hold" />
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="pr-actions">
+          <p class="pr-status" id="status" role="status" aria-live="polite"></p>
+          <button type="button" class="btn-text-danger" id="reset-btn">Reset all</button>
+          <button type="submit" class="btn-primary" id="submit"><svg><use href="#i-live"/></svg>Post requirement</button>
+        </div>
+      </form>
+
+      <aside class="pr-recent" aria-label="Posted requirements">
+        <h2>Posted requirements <span id="recent-count"></span></h2>
+        <ol class="pr-list" id="recent"></ol>
+      </aside>
+    </main>
+  </div>
+
+  <script src="post-requirement.js" type="module"></script>
+</body>
+</html>

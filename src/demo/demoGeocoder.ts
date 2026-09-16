@@ -46,6 +46,12 @@ const PLACES: Record<string, GeoResult> = {
   kakkanad: P("demo_kakkanad", "Kakkanad", 10.0159, 76.3419, SUB1, ["kochi", "ernakulam"], "Kochi"),
 };
 
+/** Bengaluru entries of the offline table, for the Post Requirement locality picker. */
+export const DEMO_BENGALURU_LOCALITIES = Object.values(PLACES)
+  .filter((p) => p.cityName === "Bengaluru")
+  .map((p) => ({ name: p.name, placeId: p.placeId, lat: p.lat, lng: p.lng, area: "Bengaluru" }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
 export class DemoGeocoder implements Geocoder {
   async search(query: string, _bias: City | null): Promise<GeoResult | null> {
     return PLACES[query.split(",")[0]!.trim().toLowerCase()] ?? null;

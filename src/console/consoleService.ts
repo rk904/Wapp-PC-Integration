@@ -1,6 +1,8 @@
 import { DEFAULT_CONFIG, effectiveAutoPost } from "../config/qualificationConfig.js";
 import { DEMO_DAY, DEMO_GROUPS, DEMO_MESSAGES } from "../demo/demoData.js";
-import { DemoGeocoder } from "../demo/demoGeocoder.js";
+import { DEMO_BENGALURU_LOCALITIES, DemoGeocoder } from "../demo/demoGeocoder.js";
+import { PostedRequirementStore, suggestLocalities, type PostedRequirement } from "./postedRequirements.js";
+import { resolve } from "node:path";
 import { ClaudeExtractor } from "../extraction/claudeExtractor.js";
 import { ExtractionError, ExtractionSchema, sanitizeExtraction, type ExtractionInput, type ExtractionResult, type Extractor } from "../extraction/schema.js";
 import { GooglePlacesGeocoder } from "../geo/googlePlacesGeocoder.js";
@@ -82,11 +84,15 @@ export class ConsoleService {
   private readonly awaitingAi = new Set<string>();
   private readonly demoIds = new Set<string>();
   readonly mode: { ai: "claude" | "demo-fixtures"; geocoder: "google-places" | "demo"; model: string | null };
+  readonly posted: PostedRequirementStore;
+  private readonly geocoder: Geocoder;
 
   constructor(env: NodeJS.ProcessEnv = process.env) {
     const claude = env.ANTHROPIC_API_KEY ? new ClaudeExtractor() : null;
     const geocoder: Geocoder = env.GOOGLE_MAPS_API_KEY ? new GooglePlacesGeocoder(env.GOOGLE_MAPS_API_KEY) : new DemoGeocoder();
     this.extractor = new ConsoleExtractor(claude);
+    this.geocoder = geocoder;
+    this.posted = new PostedRequirementStore(env.VERCEL ? null : resolve(env.WA_DATA_DIR ?? "data", "posted-requirements.json"));
     this.mode = { ai: claude ? "claude" : "demo-fixtures", geocoder: env.GOOGLE_MAPS_API_KEY ? "google-places" : "demo", model: claude?.model ?? null };
     this.repo.config = structuredClone(DEFAULT_CONFIG);
     for (const g of DEMO_GROUPS) this.repo.groups.set(g.groupId, g);
@@ -195,6 +201,18 @@ export class ConsoleService {
       else counts.skipped++;
     }
     return { ...counts, invalidExtractions: invalid, skippedRows: parsed.skipped.slice(0, 5).map((s) => s.reason) };
+  }
+
+  // ---------------------------------------------------------------------------
+  // Post Requirement screen
+  // ---------------------------------------------------------------------------
+
+  suggestLocalities(q: string) {
+    return suggestLocalities(q, this.geocoder, DEMO_BENGALURU_LOCALITIES);
+  }
+
+  postRequirement(raw: unknown): PostedRequirement {
+    return this.posted.create(raw);
   }
 
   // ---------------------------------------------------------------------------

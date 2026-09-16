@@ -775,3 +775,4 @@ mark.src.hot { background: var(--yellow); text-decoration-color: #000; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
 }
+a.rail-btn { text-decoration: none; }

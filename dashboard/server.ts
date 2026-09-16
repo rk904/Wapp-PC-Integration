@@ -3,6 +3,7 @@ import { createServer, type IncomingMessage, type ServerResponse } from "node:ht
 import { extname, join, normalize, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ConsoleError, ConsoleService } from "../src/console/consoleService.js";
+import { ValidationError } from "../src/console/postedRequirements.js";
 
 /**
  * WA-Intake console server. Plain Node http, no framework.
@@ -50,6 +51,20 @@ export async function handle(req: IncomingMessage, res: ServerResponse): Promise
       return json(res, 200, await service.ingestWhatsAppWeb(body.rows as never, body.extractions ?? {}));
     }
 
+    if (req.method === "GET" && url.pathname === "/api/localities") return json(res, 200, await service.suggestLocalities(url.searchParams.get("q") ?? ""));
+    if (req.method === "GET" && url.pathname === "/api/posted") return json(res, 200, service.posted.list());
+    if (req.method === "POST" && url.pathname === "/api/posted") {
+      const body = JSON.parse(Buffer.from(await readBody(req)).toString("utf8") || "{}");
+      return json(res, 201, service.postRequirement(body));
+    }
+    const status = url.pathname.match(/^\/api\/posted\/([^/]+)\/status$/);
+    if (req.method === "POST" && status) {
+      const body = JSON.parse(Buffer.from(await readBody(req)).toString("utf8") || "{}") as { status?: string };
+      if (!["open", "closed", "lost"].includes(body.status ?? "")) return json(res, 400, { error: "status must be open, closed or lost" });
+      const r = service.posted.setStatus(decodeURIComponent(status[1]!), body.status as "open");
+      return r ? json(res, 200, r) : json(res, 404, { error: "Requirement not found" });
+    }
+
     const review = url.pathname.match(/^\/api\/requirements\/([^/]+)\/(approve|reject)$/);
     if (req.method === "POST" && review) {
       const id = decodeURIComponent(review[1]!);
@@ -59,6 +74,7 @@ export async function handle(req: IncomingMessage, res: ServerResponse): Promise
     if (req.method === "GET") return serveStatic(url.pathname, res);
     return json(res, 405, { error: "Method not allowed" });
   } catch (err) {
+    if (err instanceof ValidationError) return json(res, 422, { error: err.message, issues: err.issues });
     if (err instanceof ConsoleError) return json(res, err.status, { error: err.message });
     console.error(err);
     return json(res, 500, { error: err instanceof Error ? err.message : "Unexpected error" });
